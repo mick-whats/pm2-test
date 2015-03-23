@@ -1,0 +1,23 @@
+{
+  "apps": [
+    {
+      "name"    : "node-dev",
+      "script"  : "helloNode.js",
+      "log_date_format"  : "YYYY-MM-DD",
+      "log_file"   : "./logs/child.log",
+      "error_file" : "./logs/child-err.log",
+      "out_file"   : "./logs/child-out.log",
+      "pid_file"   : "./logs/child.pid",
+      "watch"   : true,
+      "ignore_watch" : ["node_modules", "logs"],
+      "watch_options": {
+        "followSymlinks": false
+      },
+      "env": {
+        "NODE_ENV": "development",
+        "PORT"    : 12345
+      },
+      "exec_mode"  : "fork_mode"
+    }
+  ]
+}

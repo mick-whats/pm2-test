@@ -1,0 +1,25 @@
+{
+  "apps": [
+    {
+      "name"    : "ruby-test",
+      "script"  : "helloRuby.rb"
+    },
+    {
+      "name"    : "node-test",
+      "script"  : "helloNode.js"
+    },
+    {
+      "name"    : "python-test",
+      "script"  : "helloPython.py"
+    },
+    {
+      "name"    : "node-test2",
+      "script"  : "helloNode.js",
+      "watch"   : "./",
+      "env": {
+        "NODE_ENV": "development",
+        "PORT"    : 12345
+      }
+    }
+  ]
+}
