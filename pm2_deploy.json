@@ -1,4 +1,23 @@
 {
+    "apps": [
+      {
+        "name"    : "multi-test",
+        "script"  : "test.js",
+        "env": {
+          "NODE_ENV": "development",
+          "PORT"    : 11111
+        }
+      },
+      {
+        "name"    : "multi-test2",
+        "script"  : "test.js",
+        "env": {
+          "NODE_ENV": "development",
+          "PORT"    : 22222
+        },
+        "exec_interpreter": "/Users/atu/.nodebrew/node/v0.12.0/bin/node"
+      }
+    ],
   "deploy" : {
     "production" : {
       "user" : "node",
@@ -12,7 +31,7 @@
       "user" : "zany",
       "host" : "feecle",
       "ref"  : "origin/master",
-      "repo" : "git@github.com:mick-whats/pm2-test.git",
+      "repo" : "https://github.com/mick-whats/pm2-test",
       "path" : "/home/zany/test",
       "post-deploy" : "pm2 startOrRestart pm2_deploy.json --env dev",
       "env"  : {
