@@ -20,11 +20,11 @@
     ],
   "deploy" : {
     "production" : {
-      "user" : "node",
-      "host" : "212.83.163.1",
+      "user" : "zany",
+      "host" : "feecle",
       "ref"  : "origin/master",
       "repo" : "git@github.com:repo.git",
-      "path" : "/var/www/production",
+      "path" : "/home/zany/test/testRepo",
       "post-deploy" : "pm2 startOrRestart pm2_deploy.json --env production"
     },
     "dev" : {
